@@ -1,12 +1,12 @@
-import type { NextPage } from 'next'
-import Image from 'next/image'
+import type {NextPage} from 'next';
+import Image from 'next/image';
 
-import logo from '../public/logo.svg'
-import header from '../public/header.svg'
-import footer from '../public/footer.svg'
-import item1 from '../public/products/shirt.png'
-import item2 from '../public/products/hoodie.png'
-import item3 from '../public/products/cap.png'
+import logo from '../public/logo.svg';
+import header from '../public/header.svg';
+import footer from '../public/footer.svg';
+import item1 from '../public/products/shirt.png';
+import item2 from '../public/products/hoodie.png';
+import item3 from '../public/products/cap.png';
 
 const products = {
 	product1: {
@@ -30,15 +30,15 @@ const products = {
 		price: '7.95',
 		category: ['cap', 'summer'],
 	},
-}
+};
 
 const MiddleThing = () => {
 	return (
 		<svg
-			width="auto"
+			fill="none"
 			height="auto"
 			viewBox="0 0 284 24"
-			fill="none"
+			width="auto"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<path
@@ -52,17 +52,17 @@ const MiddleThing = () => {
 			<path
 				d="M11.7811 22.9797C17.9614 22.9797 22.9714 18.0639 22.9714 12C22.9714 5.93605 17.9614 1.02026 11.7811 1.02026C5.60089 1.02026 0.59082 5.93605 0.59082 12C0.59082 18.0639 5.60089 22.9797 11.7811 22.9797Z"
 				stroke="white"
-				stroke-miterlimit="10"
+				strokeMiterlimit="10"
 			/>
 			<path
 				d="M142.414 22.029C165.072 22.029 183.441 17.5389 183.441 12.0001C183.441 6.4612 165.072 1.97107 142.414 1.97107C119.755 1.97107 101.386 6.4612 101.386 12.0001C101.386 17.5389 119.755 22.029 142.414 22.029Z"
 				stroke="white"
-				stroke-miterlimit="10"
+				strokeMiterlimit="10"
 			/>
 			<path
 				d="M142.414 22.029C148.059 22.029 152.635 17.5389 152.635 12.0001C152.635 6.4612 148.059 1.97107 142.414 1.97107C136.769 1.97107 132.192 6.4612 132.192 12.0001C132.192 17.5389 136.769 22.029 142.414 22.029Z"
 				stroke="white"
-				stroke-miterlimit="10"
+				strokeMiterlimit="10"
 			/>
 			<path
 				d="M142.414 13.8435C143.451 13.8435 144.292 13.0182 144.292 12C144.292 10.9819 143.451 10.1566 142.414 10.1566C141.376 10.1566 140.535 10.9819 140.535 12C140.535 13.0182 141.376 13.8435 142.414 13.8435Z"
@@ -97,41 +97,39 @@ const MiddleThing = () => {
 				fill="white"
 			/>
 		</svg>
-	)
-}
+	);
+};
 
 const Home: NextPage = () => {
 	return (
 		<div className="flex justify-center h-full w-screen bg-black overflow-x-hidden">
 			<div className="flex flex-col justify-between h-full w-75vw ">
 				<div className="flex justify-between align-middle">
-					<Image src={logo} />
+					<Image alt="logo" src={logo} />
 					<div className="flex self-center">
 						<MiddleThing />
 					</div>
-					<button className="border-2 rounded-full py-1 px-5">
-						CART
-					</button>
+					<button className="border-2 rounded-full py-1 px-5">CART</button>
 				</div>
 				<div className="flex self-center text-white text-center">
-					<Image src={header} />
+					<Image alt="header" src={header} />
 				</div>
 				<div className="h-8 ">
 					<ul className="flex h-full font-medium	 xs:text-xl md:text-2xl lg:text-4xl tracking-wider animate-marquee ">
 						<li className="flex justify-center items-center w-75vw flex-shrink-0 whitespace-no-wrap">
-							A man can't have enough basement. swag
+							A man can&apos;t have enough basement. swag
 						</li>
 						<li className="flex justify-center items-center">-</li>
 						<li className="flex justify-center items-center w-75vw flex-shrink-0 whitespace-no-wrap">
-							A man can't have enough basement. swag
+							A man can&apos;t have enough basement. swag
 						</li>
 						<li className="flex justify-center items-center">-</li>
 						<li className="flex justify-center items-center w-75vw flex-shrink-0 whitespace-no-wrap">
-							A man can't have enough basement. swag
+							A man can&apos;t have enough basement. swag
 						</li>
 						<li className="flex justify-center items-center">-</li>
 						<li className="flex justify-center items-center w-75vw flex-shrink-0 whitespace-no-wrap">
-							A man can't have enough basement. swag
+							A man can&apos;t have enough basement. swag
 						</li>
 						<li className="flex justify-center items-center">-</li>
 					</ul>
@@ -140,6 +138,7 @@ const Home: NextPage = () => {
 					<ul className="flex flex-col sm:flex-row justify-between w-full px-4">
 						<li className="px-4">
 							<Image
+								alt={'product' + products.product1.id}
 								className="border-white bg-gradient-to-t from-dark to-light"
 								src={products.product1.image}
 							/>
@@ -150,6 +149,7 @@ const Home: NextPage = () => {
 						</li>
 						<li className="px-4">
 							<Image
+								alt={'product' + products.product2.id}
 								className="bg-gradient-to-t from-dark to-light"
 								src={products.product2.image}
 							/>
@@ -160,6 +160,7 @@ const Home: NextPage = () => {
 						</li>
 						<li className="px-4">
 							<Image
+								alt={'product' + products.product3.id}
 								className="bg-gradient-to-t from-dark to-light "
 								src={products.product3.image}
 							/>
@@ -171,11 +172,11 @@ const Home: NextPage = () => {
 					</ul>
 				</div>
 				<div className="flex self-center text-white text-center">
-					<Image src={footer} />
+					<Image alt="footer" src={footer} />
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;

@@ -5,10 +5,9 @@
     "node": true
   },
   "extends": [
+	"plugin:prettier/recommended",
     "next",
-    "next/core-web-vitals",
-	"plugin:@typescript-eslint/recommended",
-	"plugin:prettier/recommended"
+    "next/core-web-vitals"
   ],
   "plugins": ["react", "prettier", "import", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
@@ -32,10 +31,10 @@
       {
         "printWidth": 100,
         "trailingComma": "all",
-		"useTabs": false,
+		"useTabs": true,
         "tabWidth": 4,
         "semi": true,
-        "singleQuote": false,
+        "singleQuote": true,
         "bracketSpacing": false,
         "arrowParens": "always",
         "endOfLine":"auto"
